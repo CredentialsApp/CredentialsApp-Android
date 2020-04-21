@@ -12,35 +12,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="sans-serif-medium"
         android:text="My credentials"
         android:textAlignment="center"
         android:textColor="#010101"
-        android:textSize="42sp"
+        android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="50dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginRight="10dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/testImage" />
+        app:srcCompat="@drawable/testimage" />
 
     <ImageView
         android:id="@+id/image_credentialsicon"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_percent=".5"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_Nocredentialfound"
         app:layout_constraintLeft_toLeftOf="parent"
+
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent=".5"
+        app:layout_constraintTop_toBottomOf="@+id/MyCredentials"
         app:srcCompat="@drawable/credentialsicon" />
 
     <TextView
@@ -50,7 +51,7 @@
         android:layout_marginTop="10dp"
         android:text="No credential found"
         android:textColor="#6F6F71"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -63,8 +64,9 @@
         android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-medium"
         android:text="You haven't added a credential yet."
+        android:textAlignment="center"
         android:textColor="#6F6F71"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_Nocredentialfound" />
@@ -75,31 +77,30 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="Import your credentials and manage here"
+        android:textAlignment="center"
         android:textColor="#6F6F71"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_Youhaventaddedacredentialyet" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/add_credentials_button"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
-        android:background="#0A4DE6"
-        android:bottomLeftRadius="20dp"
-        android:bottomRightRadius="20dp"
-        android:drawableLeft="@android:drawable/ic_plus"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/add_credential_btn_background"
+        android:drawableLeft="@drawable/ic_add_symbol"
         android:padding="15dp"
         android:text="Add Credential"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#ffffff"
-        android:topLeftRadius="20dp"
-        android:topRightRadius="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_Importyourcredentialsandmanagehere" />
+        app:layout_constraintTop_toBottomOf="@+id/text_Importyourcredentialsandmanagehere"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 
