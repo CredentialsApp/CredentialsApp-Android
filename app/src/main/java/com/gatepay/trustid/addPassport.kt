@@ -15,6 +15,10 @@ class addPassport : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_passport)
 
+        imageView_backbutton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         imageView_addPassport.setOnClickListener {
             val intent = Intent(this, ScanPassport::class.java)
