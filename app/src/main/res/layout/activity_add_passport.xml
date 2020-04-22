@@ -6,26 +6,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#EFEDF4">
 
+    <ImageView
+        android:id="@+id/imageView_backbutton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/leftarrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
 
     <TextView
         android:id="@+id/AddPassport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-medium"
         android:text="Add passport"
         android:textAlignment="center"
         android:textColor="#010101"
         android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_backbutton" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="50dp"
         android:layout_height="60dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="10dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -46,8 +57,8 @@
         app:layout_constraintTop_toBottomOf="@+id/AddPassport">
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
+            android:id="@+id/imageView_addPassport"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
@@ -73,6 +84,7 @@
             app:srcCompat="@drawable/facialauth_btn" />
 
     </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
