@@ -21,5 +21,10 @@ class addPassport : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        imageView_addNFC.setOnClickListener {
+            val intent = Intent(this, NfcPassport::class.java)
+            startActivity(intent)
+        }
     }
     }

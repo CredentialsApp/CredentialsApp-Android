@@ -37,7 +37,7 @@ class BottomSheetEx : BottomSheetDialogFragment() {
         }
 
         v.cancelBtn.setOnClickListener {
-
+            dismiss()
         }
         return v
     }
