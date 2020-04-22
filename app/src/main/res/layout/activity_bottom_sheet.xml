@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+
+    >
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:id="@+id/passwordBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableLeft="@drawable/ic_passport_colour"
+        android:drawablePadding="30dp"
+        android:text="Passport"
+        android:textAlignment="textStart"
+        android:textColor="#6E6E6E"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/idCardBtn"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:drawableLeft="@drawable/ic_license_blue"
+        android:drawablePadding="30dp"
+        android:text="Identity card"
+        android:textAlignment="textStart"
+        android:textColor="#6E6E6E"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/drivingLicenseBtn"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:drawableLeft="@drawable/ic_driving_license_yellow"
+        android:drawablePadding="30dp"
+        android:text="Driving license"
+        android:textAlignment="textStart"
+        android:textColor="#6E6E6E"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/cancelBtn"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:drawableLeft="@drawable/ic_cancel_red"
+        android:drawablePadding="30dp"
+        android:text="@android:string/cancel"
+        android:textAlignment="textStart"
+        android:textColor="#6E6E6E"
+        android:textSize="20sp" />
+
+</LinearLayout>
