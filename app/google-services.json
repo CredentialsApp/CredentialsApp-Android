@@ -8,7 +8,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:400603742846:android:435108439c7ec8b3d3ce2f",
+        "mobilesdk_app_id": "1:400603742846:android:68547069696e00aed3ce2f",
         "android_client_info": {
           "package_name": "com.gatepay.trustid"
         }
@@ -19,50 +19,6 @@
           "client_type": 1,
           "android_info": {
             "package_name": "com.gatepay.trustid",
-            "certificate_hash": "dc374ed62f05614844fae78f7380ca0c6061c448"
-          }
-        },
-        {
-          "client_id": "400603742846-v2v37lv8n467145fg29aejdf2lhumr6u.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD_x-VKZXoaRTnJWyvVDMIYJTvk4L8NGfE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "400603742846-v2v37lv8n467145fg29aejdf2lhumr6u.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "400603742846-uj1cjcktmojutd2ecciafq04rb7uo292.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.gatepay.trustiddevelopment"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:400603742846:android:1c819c258945e2b5d3ce2f",
-        "android_client_info": {
-          "package_name": "om.gatepay.trustid"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "400603742846-vg8olfqls092og2nej5s0s39qcm063ff.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "om.gatepay.trustid",
             "certificate_hash": "dc374ed62f05614844fae78f7380ca0c6061c448"
           }
         },
