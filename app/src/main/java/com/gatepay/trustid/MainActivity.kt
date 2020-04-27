@@ -1,11 +1,10 @@
 package com.gatepay.trustid
 
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-
 import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.dynamiclinks.ktx.dynamicLinks
@@ -37,28 +36,30 @@ class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener {
                 var deepLink: Uri? = null
                 if (pendingDynamicLinkData != null) {
                     deepLink = pendingDynamicLinkData.link
+
                     var deepLinkHexString =
                         removeWord(deepLink.toString(), "https://trust-id.co/resolve/")
+                    var asciiStringDeepLink = HexadecimalToASCII(deepLinkHexString)
+
+
                     Snackbar.make(
                         findViewById(R.id.constraintlayout),
-                        deepLinkHexString,
+                        asciiStringDeepLink.toString(),
                         Snackbar.LENGTH_LONG
                     ).show()
                 }
 
-                // Handle the deep link. For example, open the linked
-                // content, or apply promotional credit to the user's
-                // account.
-                // ...
-
-                // ...
             }
             .addOnFailureListener(this) { e -> Log.w("TAG", "getDynamicLink:onFailure", e) }
     }
 
+
+
     override fun onOptionClick(text: String) {
         TODO("Not yet implemented")
     }
+
+
 
 
     fun removeWord(value: String, word: String): String {
@@ -93,5 +94,21 @@ class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener {
         }
         return result
     }
+
+
+    fun HexadecimalToASCII(hexValue: String): String {
+        var asciiString = ""
+            var i = 0
+            while (i < hexValue.length) {
+
+                val part: String = hexValue.substring(i, i + 2)
+                val asciiChar = part.toInt(16).toChar()
+                asciiString = asciiString + asciiChar
+                i += 2
+            }
+        return asciiString
+    }
+
+
 
 }
