@@ -31,6 +31,12 @@
         <activity android:name=".addPassport"/>
         <activity android:name=".ScanPassport"/>
         <activity android:name=".NfcPassport"/>
+
+
+
+        <activity android:name=".ScanPassportjava" />
+
     </application>
+
 
 </manifest>

@@ -39,7 +39,7 @@ dependencies {
     
     //add design library to support Bottom Sheet
     implementation 'com.google.android.material:material:1.0.0'
-    // add picasso image library handler
+    // add glide image library handler
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     // firebase
@@ -47,6 +47,14 @@ dependencies {
     //deep linking
     implementation 'com.google.firebase:firebase-dynamic-links-ktx:19.1.0'
 
+   // MRTD Reader dependency
+    implementation 'com.appliedrec:mrtd-reader:[1.0.2,2.0.0['
+
+    ////NFC Passport
+        implementation 'org.jmrtd:jmrtd:0.7.12'
+        implementation 'com.madgag.spongycastle:prov:1.58.0.0'
+        implementation 'net.sf.scuba:scuba-sc-android:0.0.20'
+        implementation group: 'org.ejbca.cvc', name: 'cert-cvc', version: '1.4.6'
 
 
 

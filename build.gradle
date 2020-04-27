@@ -5,7 +5,11 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
+
+        maven {
+            url 'https://dev.ver-id.com/artifactory/gradle-release'
+            name 'Ver-ID'
+        }
     }
     dependencies {
         classpath 'com.google.gms:google-services:4.3.3'
@@ -22,7 +26,11 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+
+        maven {
+            url 'https://dev.ver-id.com/artifactory/gradle-release'
+            name 'Ver-ID'
+        }
     }
 }
 

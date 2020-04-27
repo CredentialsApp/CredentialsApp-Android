@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_scan_nfc.*
 import kotlinx.android.synthetic.main.activity_scan_your_passport.*
 import kotlinx.android.synthetic.main.activity_scan_your_passport.imageView_backbutton
 
-class ScanPassport  : AppCompatActivity(){
+class ScanPassport  : AppCompatActivity()  {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,10 @@ class ScanPassport  : AppCompatActivity(){
             startActivity(intent)
         }
 
-        
+        start_scanning_button.setOnClickListener {
+            val intent = Intent(this, ScanPassportjava::class.java)
+            startActivity(intent)
+        }
         Glide.with(this)
             .asGif()
             .load(R.drawable.scan_passport_anim_light)
