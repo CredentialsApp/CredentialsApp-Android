@@ -12,7 +12,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_my_crendentials.*
 
 
-class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener {
+class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener, AuthBottomSheetEx.authBottomSheetListener {
 
 
 
@@ -41,12 +41,14 @@ class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener {
                         removeWord(deepLink.toString(), "https://trust-id.co/resolve/")
                     var asciiStringDeepLink = HexadecimalToASCII(deepLinkHexString)
 
+                    val authBottomSheet = AuthBottomSheetEx()
+                    authBottomSheet.show(supportFragmentManager, "Auth BottomSheetEx")
 
-                    Snackbar.make(
-                        findViewById(R.id.constraintlayout),
-                        asciiStringDeepLink.toString(),
-                        Snackbar.LENGTH_LONG
-                    ).show()
+//                    Snackbar.make(
+//                        findViewById(R.id.constraintlayout),
+//                        asciiStringDeepLink.toString(),
+//                        Snackbar.LENGTH_LONG
+//                    ).show()
                 }
 
             }
@@ -97,6 +99,9 @@ class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener {
 
 
     fun HexadecimalToASCII(hexValue: String): String {
+
+        // TODO CHECK IF STRING MATCHES HEXADECIMAL
+        
         var asciiString = ""
             var i = 0
             while (i < hexValue.length) {
