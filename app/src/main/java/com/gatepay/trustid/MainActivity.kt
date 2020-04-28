@@ -4,6 +4,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.snackbar.Snackbar
@@ -37,20 +38,34 @@ class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener, Aut
                 if (pendingDynamicLinkData != null) {
                     deepLink = pendingDynamicLinkData.link
 
-                    var deepLinkHexString =
+                    val deepLinkHexString =
                         removeWord(deepLink.toString(), "https://trust-id.co/resolve/")
-                    var asciiStringDeepLink = HexadecimalToASCII(deepLinkHexString)
+                    val asciiStringDeepLink = HexadecimalToASCII(deepLinkHexString)
+                    val completeUri = Uri.parse("https://trust-id.co/resolve" + asciiStringDeepLink)
+                    val scope: String = completeUri.getQueryParameter("scope").toString()
+                    val splitScopeArray = scope.split(",").toTypedArray()
+                        splitScopeArray.forEach { println(it) }
+
 
                     val authBottomSheet = AuthBottomSheetEx()
                     authBottomSheet.show(supportFragmentManager, "Auth BottomSheetEx")
 
+
+//
 //                    Snackbar.make(
 //                        findViewById(R.id.constraintlayout),
-//                        asciiStringDeepLink.toString(),
+//                        splitScopeArray[1],
 //                        Snackbar.LENGTH_LONG
 //                    ).show()
-                }
 
+                    val toast = Toast.makeText(
+                        applicationContext,
+                        scope,
+                        Toast.LENGTH_LONG
+                    )
+                    toast.show()
+                }
+               //TODO ADD ERROR CASE HERE
             }
             .addOnFailureListener(this) { e -> Log.w("TAG", "getDynamicLink:onFailure", e) }
     }

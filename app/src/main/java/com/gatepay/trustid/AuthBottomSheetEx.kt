@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
+// TODO switch from singelton to dependency injection
 
 class AuthBottomSheetEx : BottomSheetDialogFragment() {
 
