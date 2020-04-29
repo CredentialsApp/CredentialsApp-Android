@@ -42,21 +42,32 @@ class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener, Aut
                         removeWord(deepLink.toString(), "https://trust-id.co/resolve/")
                     val asciiStringDeepLink = HexadecimalToASCII(deepLinkHexString)
                     val completeUri = Uri.parse("https://trust-id.co/resolve" + asciiStringDeepLink)
-                    val scope: String = completeUri.getQueryParameter("scope").toString()
+                    var scope: String = completeUri.getQueryParameter("scope").toString()
+                    val license_key : String = completeUri.getQueryParameter("license_key").toString()
                     val splitScopeArray = scope.split(",").toTypedArray()
                         splitScopeArray.forEach { println(it) }
 
 
-                    val authBottomSheet = AuthBottomSheetEx()
-                    authBottomSheet.show(supportFragmentManager, "Auth BottomSheetEx")
+                    //TODO deactivate dismissing of bottom sheet
 
 
-//
-//                    Snackbar.make(
-//                        findViewById(R.id.constraintlayout),
-//                        splitScopeArray[1],
-//                        Snackbar.LENGTH_LONG
-//                    ).show()
+
+                    if (license_key == "76a13-4ca79-637a2-8df2c") {
+                        val authBottomSheet = AuthBottomSheetEx()
+                        authBottomSheet.show(supportFragmentManager, "Auth BottomSheetEx")
+
+                    }
+                    else {
+                        scope = " License key not valid"
+                    }
+
+
+
+                    Snackbar.make(
+                        findViewById(R.id.constraintlayout),
+                        scope,
+                        100000
+                    ).show()
 
                     val toast = Toast.makeText(
                         applicationContext,
@@ -65,6 +76,8 @@ class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener, Aut
                     )
                     toast.show()
                 }
+
+
                //TODO ADD ERROR CASE HERE
             }
             .addOnFailureListener(this) { e -> Log.w("TAG", "getDynamicLink:onFailure", e) }
@@ -116,7 +129,6 @@ class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener, Aut
     fun HexadecimalToASCII(hexValue: String): String {
 
         // TODO CHECK IF STRING MATCHES HEXADECIMAL
-        
         var asciiString = ""
             var i = 0
             while (i < hexValue.length) {

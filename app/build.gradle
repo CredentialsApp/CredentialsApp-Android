@@ -12,7 +12,7 @@ android {
         applicationId "com.gatepay.trustid"
         minSdkVersion 22
         targetSdkVersion 29
-        versionCode 1
+        versionCode 3
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -47,14 +47,9 @@ dependencies {
     //deep linking
     implementation 'com.google.firebase:firebase-dynamic-links-ktx:19.1.0'
 
-   // MRTD Reader dependency
-    implementation 'com.appliedrec:mrtd-reader:[1.0.2,2.0.0['
 
-    ////NFC Passport
-        implementation 'org.jmrtd:jmrtd:0.7.12'
-        implementation 'com.madgag.spongycastle:prov:1.58.0.0'
-        implementation 'net.sf.scuba:scuba-sc-android:0.0.20'
-        implementation group: 'org.ejbca.cvc', name: 'cert-cvc', version: '1.4.6'
+
+
 
 
 

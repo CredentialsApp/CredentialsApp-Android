@@ -7,47 +7,32 @@
     android:orientation="vertical"
     android:padding="5dp">
 
-    <ImageView
-        android:id="@+id/imageAuthProfile"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        app:srcCompat="@drawable/user_profile" />
-
     <TextView
-        android:id="@+id/nameOfUserText"
+        android:id="@+id/authTitleText"
         style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="Name of Individual"
-        android:textAlignment="center"
-        android:textColor="#6E6E6E"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/nationalityOfUserText"
-        style="@style/TextAppearance.AppCompat.Headline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="Nationality of Individual"
-        android:textAlignment="center"
-        android:textColor="#6E6E6E"
-        android:textSize="16sp" />
-
-    <View
-        android:id="@+id/viewLine1"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="20dp"
-        android:background="#787878" />
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/trust_id_auth_logo_small"
+        android:text="@string/authAccessMessage"
+        android:textAlignment="center"
+        android:textColor="#6E6E6E"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/givenNameText"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_dot_svg"
+        android:drawablePadding="10dp"
+        android:text="Given name"
+        android:textAlignment="center"
+        android:textColor="#266DFE"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/documentNoText"
@@ -55,53 +40,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:text="document number"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_dot_svg"
+        android:drawablePadding="10dp"
+        android:text="Gender"
         android:textAlignment="viewStart"
-        android:textColor="#6E6E6E"
+        android:textColor="#266DFE"
         android:textSize="16sp" />
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:weightSum="2"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/documentNoValueText"
-            style="@style/TextAppearance.AppCompat.Headline"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="8dp"
-            android:text="9876543456756"
-            android:textAlignment="viewStart"
-            android:textColor="#6E6E6E"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_weight="0.5"
-
-            app:srcCompat="@drawable/document_locked" />
-
-    </LinearLayout>
-
-    <View
-        android:id="@+id/viewLine2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
+    <TextView
+        android:id="@+id/nationalityText"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="20dp"
-        android:background="#787878" />
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_dot_svg"
+        android:drawablePadding="10dp"
+        android:text="Nationality"
+        android:textAlignment="viewStart"
+        android:textColor="#266DFE"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/passportNoText"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_dot_svg"
+        android:drawablePadding="10dp"
+        android:text="Passport Number"
+        android:textAlignment="viewStart"
+        android:textColor="#266DFE"
+        android:textSize="16sp" />
+
 
     <Button
         android:id="@+id/authorize_button"
@@ -115,9 +89,11 @@
         android:background="@drawable/add_credential_btn_background"
         android:padding="15dp"
         android:text="Authorize"
+        android:drawablePadding="10dp"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        />
 
 
 </LinearLayout>
