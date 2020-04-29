@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+
 
 android {
     compileSdkVersion 29
@@ -10,7 +12,7 @@ android {
         applicationId "com.gatepay.trustid"
         minSdkVersion 22
         targetSdkVersion 29
-        versionCode 1
+        versionCode 3
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -37,9 +39,19 @@ dependencies {
     
     //add design library to support Bottom Sheet
     implementation 'com.google.android.material:material:1.0.0'
-    // add picasso image library handler
+    // add glide image library handler
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    // firebase
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    //deep linking
+    implementation 'com.google.firebase:firebase-dynamic-links-ktx:19.1.0'
+
+
+
+
+
+
 
 }
 

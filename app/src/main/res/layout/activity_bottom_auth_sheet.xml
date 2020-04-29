@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/authTitleText"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/trust_id_auth_logo_small"
+        android:text="@string/authAccessMessage"
+        android:textAlignment="center"
+        android:textColor="#6E6E6E"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/givenNameText"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_dot_svg"
+        android:drawablePadding="10dp"
+        android:text="Given name"
+        android:textAlignment="center"
+        android:textColor="#266DFE"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/documentNoText"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_dot_svg"
+        android:drawablePadding="10dp"
+        android:text="Gender"
+        android:textAlignment="viewStart"
+        android:textColor="#266DFE"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/nationalityText"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_dot_svg"
+        android:drawablePadding="10dp"
+        android:text="Nationality"
+        android:textAlignment="viewStart"
+        android:textColor="#266DFE"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/passportNoText"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_dot_svg"
+        android:drawablePadding="10dp"
+        android:text="Passport Number"
+        android:textAlignment="viewStart"
+        android:textColor="#266DFE"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/authorize_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/add_credential_btn_background"
+        android:padding="15dp"
+        android:text="Authorize"
+        android:drawablePadding="10dp"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#ffffff"
+        />
+
+
+</LinearLayout>
