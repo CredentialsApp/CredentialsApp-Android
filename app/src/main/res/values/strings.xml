@@ -2,4 +2,6 @@
     <string name="app_name">Trust ID</string>
 
     <string name="authAccessMessage"> <b>BitHolla</b> wants to access your</string>
+
+    <string name="camera_permission">Access to the camera is needed for detection</string>
 </resources>

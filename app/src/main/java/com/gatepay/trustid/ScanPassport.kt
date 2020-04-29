@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_scan_your_passport.imageView_back
 
 class ScanPassport  : AppCompatActivity()  {
 
+    private val REQUEST_MRZ = 12
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +25,8 @@ class ScanPassport  : AppCompatActivity()  {
         }
 
         start_scanning_button.setOnClickListener {
-            val intent = Intent(this, ScanPassportjava::class.java)
-            startActivity(intent)
+            val intent = Intent(this, CameraActivity::class.java)
+            startActivityForResult(intent, REQUEST_MRZ)
         }
         Glide.with(this)
             .asGif()

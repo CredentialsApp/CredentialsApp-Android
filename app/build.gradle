@@ -39,13 +39,35 @@ dependencies {
     
     //add design library to support Bottom Sheet
     implementation 'com.google.android.material:material:1.0.0'
+
     // add glide image library handler
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
     // firebase
     implementation 'com.google.firebase:firebase-analytics:17.2.2'
+
     //deep linking
     implementation 'com.google.firebase:firebase-dynamic-links-ktx:19.1.0'
+
+    // ML Kit dependencies
+    implementation 'com.google.firebase:firebase-core:17.0.1'
+    implementation 'com.google.firebase:firebase-ml-common:20.0.1'
+    implementation 'com.google.firebase:firebase-ml-vision:22.0.0'
+
+    //Camera
+    implementation 'io.fotoapparat:fotoapparat:2.7.0'
+
+    //NFC Passport
+    implementation 'org.jmrtd:jmrtd:0.7.12'
+    implementation 'net.sf.scuba:scuba-sc-android:0.0.20'
+
+    //WSQ
+    implementation 'com.github.mhshams:jnbis:2.0.2'
+
+    //RX
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
 
 
 
