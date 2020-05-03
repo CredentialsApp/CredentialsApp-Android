@@ -23,10 +23,13 @@ class CameraActivity  : AppCompatActivity() , CameraMrzFragment.CameraMLKitCallb
     }
 
     override fun onPassportRead(mrzInfo: MRZInfo) {
-//        val intent = Intent()
-//        intent.putExtra("KEY_MRZ_INFO", mrzInfo)
-//        setResult(Activity.RESULT_OK, intent)
-//        finish()
+        val intent = Intent(this, addPassport::class.java)
+        intent.putExtra("KEY_MRZ_INFO_DOC_NO", mrzInfo.documentNumber.toString())
+        intent.putExtra("KEY_MRZ_INFO_DOB", mrzInfo.dateOfBirth.toString())
+        intent.putExtra("KEY_MRZ_INFO_DOE", mrzInfo.dateOfExpiry.toString())
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
     }
 
     override fun onError() {

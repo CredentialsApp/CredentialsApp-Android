@@ -16,11 +16,12 @@ class NfcPassport : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan_nfc)
 
+        //TODO CHECK IF THERE IS NFC READER ON PHONE
 
-        imageView_backbutton.setOnClickListener {
-            val intent = Intent(this, addPassport::class.java)
-            startActivity(intent)
-        }
+//        imageView_backbutton.setOnClickListener {
+//            val intent = Intent(this, addPassport::class.java)
+//            startActivity(intent)
+//        }
 
         Glide.with(this)
             .asGif()

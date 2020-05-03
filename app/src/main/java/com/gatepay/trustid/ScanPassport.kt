@@ -19,10 +19,10 @@ class ScanPassport  : AppCompatActivity()  {
         setContentView(R.layout.activity_scan_your_passport)
 
 
-        imageView_backbutton.setOnClickListener {
-            val intent = Intent(this, addPassport::class.java)
-            startActivity(intent)
-        }
+//        imageView_backbutton.setOnClickListener {
+//            val intent = Intent(this, addPassport::class.java)
+//            startActivity(intent)
+//        }
 
         start_scanning_button.setOnClickListener {
             val intent = Intent(this, CameraActivity::class.java)
