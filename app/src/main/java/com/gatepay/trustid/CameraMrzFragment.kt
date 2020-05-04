@@ -168,7 +168,7 @@ class CameraMrzFragment : CameraFragment() {
                   //  status_view_bottom!!.setTextColor(resources.getColor(R.color.status_text))
                     if (cameraMLKitCallback != null) {
                         cameraMLKitCallback!!.onPassportRead(mrzInfo)
-                        Log.e("help", mrzInfo.documentNumber.toString())
+
                     }
 
                 } catch (e: IllegalStateException) {

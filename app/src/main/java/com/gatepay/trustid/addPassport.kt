@@ -21,8 +21,10 @@ class addPassport : AppCompatActivity() {
         setContentView(R.layout.activity_add_passport)
 
         val passportDocumentNo = intent.getStringExtra("KEY_MRZ_INFO_DOC_NO")
-        val passportDob = intent.getStringExtra("KEY_MRZ_INFO_DOC_NO")
-        val passportDoe =intent.getStringExtra("KEY_MRZ_INFO_DOC_NO")
+        val passportDob = intent.getStringExtra("KEY_MRZ_INFO_DOB")
+        val passportDoe =intent.getStringExtra("KEY_MRZ_INFO_DOE")
+
+
 
 
         if (passportDocumentNo != null){
@@ -42,8 +44,8 @@ class addPassport : AppCompatActivity() {
 
         Snackbar.make(
             findViewById(R.id.constraintlayout),
-           "passport number = " + passportDocumentNo,
-            1000
+           "passport Dob = " + passportDob + " passport exipry =" + passportDoe ,
+            100000
         ).show()
 
 
