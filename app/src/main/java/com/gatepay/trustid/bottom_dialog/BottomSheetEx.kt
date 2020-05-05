@@ -1,4 +1,4 @@
-package com.gatepay.trustid
+package com.gatepay.trustid.bottom_dialog
 
 import android.content.Context
 import android.content.Intent
@@ -7,8 +7,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.gatepay.trustid.R
+import com.gatepay.trustid.activities.addPassportCredentialActivity
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import kotlinx.android.synthetic.main.activity_bottom_sheet.*
 import kotlinx.android.synthetic.main.activity_bottom_sheet.view.*
 
 
@@ -24,7 +25,7 @@ class BottomSheetEx : BottomSheetDialogFragment() {
         //handle clicks
 
         v.passwordBtn.setOnClickListener {
-            val intent = Intent (getActivity(), addPassport::class.java)
+            val intent = Intent (getActivity(), addPassportCredentialActivity::class.java)
             getActivity()!!.startActivity(intent)
         }
 

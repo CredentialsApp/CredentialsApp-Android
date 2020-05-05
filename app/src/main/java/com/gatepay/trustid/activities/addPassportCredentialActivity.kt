@@ -1,9 +1,10 @@
-package com.gatepay.trustid
+package com.gatepay.trustid.activities
 
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.gatepay.trustid.R
 import com.google.android.material.snackbar.Snackbar
 
 
@@ -12,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_add_passport.*
 
 
 
-class addPassport : AppCompatActivity() {
+class addPassportCredentialActivity : AppCompatActivity() {
 
 
 
@@ -34,7 +35,7 @@ class addPassport : AppCompatActivity() {
 
 
             imageView_addNFC.setOnClickListener {
-                val intent = Intent(this, NfcPassport::class.java)
+                val intent = Intent(this, NfcPassportActivity::class.java)
                 intent.putExtra("PassportDocNo", passportDocumentNo)
                 intent.putExtra("PassportDob", passportDob)
                 intent.putExtra("PassportDoe", passportDoe)
@@ -50,13 +51,13 @@ class addPassport : AppCompatActivity() {
 
 
         imageView_backbutton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
 
         imageView_addPassport.setOnClickListener {
-            val intent = Intent(this, ScanPassport::class.java)
+            val intent = Intent(this, ScanPassportActivity::class.java)
             startActivity(intent)
         }
 

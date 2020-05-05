@@ -18,7 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,14 +37,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".addPassport"
+        <activity android:name=".activities.addPassportCredentialActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".ScanPassport"
+        <activity android:name=".activities.ScanPassportActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".NfcPassport"
+        <activity android:name=".activities.NfcPassportActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".CameraActivity"
+        <activity android:name=".activities.CameraActivity"
             android:screenOrientation="landscape"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"

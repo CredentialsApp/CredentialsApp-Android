@@ -1,4 +1,4 @@
-package com.gatepay.trustid
+package com.gatepay.trustid.activities
 
 import android.net.Uri
 import android.os.Bundle
@@ -6,6 +6,9 @@ import android.util.Log
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.gatepay.trustid.bottom_dialog.AuthBottomSheetEx
+import com.gatepay.trustid.bottom_dialog.BottomSheetEx
+import com.gatepay.trustid.R
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.dynamiclinks.ktx.dynamicLinks
@@ -13,7 +16,9 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_my_crendentials.*
 
 
-class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener, AuthBottomSheetEx.authBottomSheetListener {
+class HomeActivity : AppCompatActivity(),
+    BottomSheetEx.BottomSheetListener,
+    AuthBottomSheetEx.authBottomSheetListener {
 
 
 
@@ -24,7 +29,8 @@ class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener, Aut
         setContentView(R.layout.activity_my_crendentials)
 
         add_credentials_button.setOnClickListener {
-                    val bottomSheet = BottomSheetEx()
+                    val bottomSheet =
+                        BottomSheetEx()
                     bottomSheet.show(supportFragmentManager, "BottomSheetEx")
                 }
 
@@ -53,7 +59,8 @@ class MainActivity : AppCompatActivity(), BottomSheetEx.BottomSheetListener, Aut
 
 
                     if (license_key == "76a13-4ca79-637a2-8df2c") {
-                        val authBottomSheet = AuthBottomSheetEx()
+                        val authBottomSheet =
+                            AuthBottomSheetEx()
                         authBottomSheet.show(supportFragmentManager, "Auth BottomSheetEx")
 
                     }

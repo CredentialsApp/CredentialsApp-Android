@@ -1,11 +1,11 @@
-package com.gatepay.trustid
+package com.gatepay.trustid.bottom_dialog
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.gatepay.trustid.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 // TODO switch from singelton to dependency injection

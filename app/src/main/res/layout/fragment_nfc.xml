@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:stretchColumns="*"
+        android:paddingBottom="20dp"
+        android:layout_above="@+id/progressBar">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:shrinkColumns="*"
+                    android:layout_weight="1">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/value_passport_number"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/value_DOB"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/value_expiration_date"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                    </TableRow>
+                </TableLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </TableRow>
+    </TableLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewNfcTitle"
+        android:layout_alignRight="@+id/textViewNfcTitle"
+        android:layout_above="@+id/textViewNfcTitle"
+        android:indeterminate="true"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/textViewNfcTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NFC TITLE"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textSize="14sp"
+        android:layout_margin="14dp"/>
+
+    <TextView android:id="@+id/status_view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="14dp"
+        android:background="#0000"
+        android:text=""
+        android:textColor="#f23f32"
+        android:textSize="14sp"
+        android:autoLink="web"
+        android:clickable="true" />
+
+</RelativeLayout>

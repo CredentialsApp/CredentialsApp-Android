@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/constraintlayout"
     android:background="#EFEDF4"
-    tools:context=".MainActivity">
+    tools:context=".activities.HomeActivity">
 
     <TextView
         android:id="@+id/MyCredentials"
