@@ -92,11 +92,14 @@
         android:id="@+id/textViewNfcTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="NFC TITLE"
-        android:gravity="center"
         android:layout_centerInParent="true"
-        android:textSize="14sp"
-        android:layout_margin="14dp"/>
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="center"
+        android:text="PUT PHONE ON TOP OF PASSPORT AND DO NOT MOVE IT "
+        android:textSize="14sp" />
 
     <TextView android:id="@+id/status_view_bottom"
         android:layout_width="match_parent"

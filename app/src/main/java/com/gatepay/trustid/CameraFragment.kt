@@ -308,7 +308,7 @@ abstract class CameraFragment : androidx.fragment.app.Fragment(), ActivityCompat
     abstract fun onRequestPermissionsResult(permissionsDenied: ArrayList<String>, permissionsGranted: ArrayList<String>)
 
     protected fun showErrorCameraPermissionDenied() {
-        ErrorDialog.newInstance(getString(R.string.camera_permission))
+        ErrorDialog.newInstance(getString(R.string.permission_camera_rationale))
             .show(childFragmentManager, FRAGMENT_DIALOG)
     }
 

@@ -50,6 +50,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
+<activity android:name=".activities.NfcReadingActivity" />
 
     </application>
 

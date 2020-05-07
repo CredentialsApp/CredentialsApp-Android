@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.gatepay.trustid.CameraMrzFragment
+import com.gatepay.trustid.IntentData
 import com.gatepay.trustid.R
 import org.jmrtd.lds.icao.MRZInfo
 
@@ -30,9 +31,10 @@ class CameraActivity  : AppCompatActivity() ,
 
     override fun onPassportRead(mrzInfo: MRZInfo) {
         val intent = Intent(this, addPassportCredentialActivity::class.java)
-        intent.putExtra("KEY_MRZ_INFO_DOC_NO", mrzInfo.documentNumber.toString())
-        intent.putExtra("KEY_MRZ_INFO_DOB", mrzInfo.dateOfBirth.toString())
-        intent.putExtra("KEY_MRZ_INFO_DOE", mrzInfo.dateOfExpiry.toString())
+//        intent.putExtra("KEY_MRZ_INFO_DOC_NO", mrzInfo.documentNumber.toString())
+//        intent.putExtra("KEY_MRZ_INFO_DOB", mrzInfo.dateOfBirth.toString())
+//        intent.putExtra("KEY_MRZ_INFO_DOE", mrzInfo.dateOfExpiry.toString())
+        intent.putExtra(IntentData.KEY_MRZ_INFO, mrzInfo)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
         finish()

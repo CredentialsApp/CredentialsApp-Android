@@ -227,7 +227,7 @@ class CameraMrzFragment : CameraFragment() {
                                             grantResults: IntArray) {
         if (requestCode == REQUEST_CAMERA_PERMISSION) {
             if (grantResults.size != 1 || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                ErrorDialog.newInstance(getString(R.string.camera_permission))
+                ErrorDialog.newInstance(getString(R.string.permission_camera_rationale))
                     .show(childFragmentManager, FRAGMENT_DIALOG)
             }
         } else {
@@ -288,7 +288,7 @@ class CameraMrzFragment : CameraFragment() {
         override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
             val parent = parentFragment
             return AlertDialog.Builder(activity)
-                .setMessage(R.string.camera_permission)
+                .setMessage(R.string.permission_camera_rationale)
                 .setPositiveButton(android.R.string.ok) { dialog, which ->
                     parent!!.requestPermissions(arrayOf(Manifest.permission.CAMERA),
                         REQUEST_CAMERA_PERMISSION)

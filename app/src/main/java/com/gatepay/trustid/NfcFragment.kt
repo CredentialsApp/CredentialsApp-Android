@@ -14,6 +14,8 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import com.gatepay.trustid.data.Passport
+import com.gatepay.trustid.utils.NFCDocumentTag
 import io.reactivex.disposables.CompositeDisposable
 import net.sf.scuba.smartcards.CardServiceException
 import net.sf.scuba.smartcards.ISO7816
@@ -120,7 +122,7 @@ class NfcFragment : androidx.fragment.app.Fragment() {
 
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
         val activity = activity
         if (activity is NfcFragment.NfcFragmentListener) {
@@ -206,7 +208,7 @@ class NfcFragment : androidx.fragment.app.Fragment() {
         fun newInstance(mrzInfo: MRZInfo): NfcFragment {
             val myFragment = NfcFragment()
             val args = Bundle()
-            args.putSerializable(IntentData.KEY_MRZ_INFO, mrzInfo)
+            args.putSerializable("KEY_MRZ_INFO", mrzInfo)
             myFragment.arguments = args
             return myFragment
         }

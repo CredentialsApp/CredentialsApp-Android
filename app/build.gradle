@@ -13,7 +13,7 @@ android {
         applicationId "com.gatepay.trustid"
         minSdkVersion 22
         targetSdkVersion 29
-        versionCode 3
+        versionCode 4
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -82,8 +82,8 @@ dependencies {
 
 
     //Annotations
-    annotationProcessor "org.androidannotations:androidannotations:4.4.0"
-    implementation "org.androidannotations:androidannotations-api:4.4.0"
+//    annotationProcessor "org.androidannotations:androidannotations:4.4.0"
+  //  implementation "org.androidannotations:androidannotations-api:4.4.0"
 
 
 
